@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @import url('./font.css');
+
+    body {
+      padding: 12px;
+      font-family: Youshebiaotihei;
+    }
+
+    button {
+      font-family: Youshebiaotihei;
+      background-color: #336dab;
+      border: none;
+      color: white;
+      padding: 8px 12px;
+      width: 200px;
+      text-align: center;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #336dabea;
+    }
+
+    textarea {
+      width: 300px;
+      height: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="text-transform: uppercase; font-size: 20px; margin-bottom: 12px; text-align: center; width: 100%">Paste
+    and feed confluence
+  </div>
+  <div style="width: 100%; text-align: center;">
+    <textarea id="htmlTextarea"></textarea>
+  </div>
+  <div style="width: 100%; text-align: center; margin-top: 12px;">
+    <button id="feedButton">Feed</button>
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
