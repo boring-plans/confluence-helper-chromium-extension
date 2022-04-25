@@ -3,5 +3,5 @@ chrome.runtime.onMessage.addListener((request, _, sendResponse) => {
   if(iframe){
     iframe.contentDocument.body.innerHTML = request.html;
   }
-  sendResponse({ fromContent: "Feeded!" });
+  sendResponse({ fromContent: "Fed!" });
 });
