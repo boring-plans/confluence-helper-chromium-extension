@@ -1,24 +1,31 @@
 {
-  "name": "Confluence Helper Chromium Extension",
+  "name": "T.MD",
   "version": "1.0.1",
-  "manifest_version": 2,
-  "description": "A chromium extension to help with confluence doc writing.",
+  "manifest_version": 3,
+  "description": "Teleport Markdown: A chromium extension to help with online doc writing.",
   "icons": {
     "16": "icons/logo16x16.png",
     "32": "icons/logo32x32.png",
     "48": "icons/logo48x48.png",
     "128": "icons/logo128x128.png"
   },
-  "browser_action": {
-    "default_popup": "popup/index.html"
+  "action": {
+    "default_popup": "popup/dist/index.html"
   },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+  "permissions": [
+    "activeTab",
+    "notifications"
+  ],
   "content_scripts": [
     {
       "matches": [
         "<all_urls>"
       ],
       "js": [
-        "content-scripts/content.js"
+        "content.js"
       ]
     }
   ]

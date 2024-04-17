@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="208" height="208" viewBox="0 0 208 208" fill="none">
+<g filter="url(#filter_-p8aATql_Xrxvlraw1JiC)">
+<path  transform="translate(4, 2)"   fill="#262424"  d="M0 176L0 24C0 10.7452 10.7452 0 24 0L176 0C189.255 0 200 10.7452 200 24L200 176C200 189.255 189.255 200 176 200L24 200C10.7452 200 0 189.255 0 176Z">
+</path>
+<path d="M40.9833 123.416L51.655 123.416L51.655 87.8831L63.6979 87.8831L63.6979 79L29 79L29 87.8831L40.9833 87.8831L40.9833 123.416ZM75.9197 124.25C79.5564 124.25 82.2393 121.329 82.2393 117.633C82.2393 113.936 79.5564 111.075 75.9197 111.075C72.2234 111.075 69.6002 113.936 69.6002 117.633C69.6002 121.329 72.2234 124.25 75.9197 124.25ZM91.4801 123.416L101.019 123.416L101.019 108.213C101.019 103.801 100.184 97.1836 99.6479 92.8315L99.8863 92.8315L103.463 103.444L109.485 119.66L115.328 119.66L121.289 103.444L124.986 92.8315L125.284 92.8315C124.688 97.1836 123.853 103.801 123.853 108.213L123.853 123.416L133.571 123.416L133.571 79L122.005 79L115.208 98.1971C114.374 100.761 113.658 103.563 112.764 106.246L112.466 106.246C111.631 103.563 110.916 100.761 110.021 98.1971L102.986 79L91.4801 79L91.4801 123.416ZM143.766 123.416L157.12 123.416C170.057 123.416 179 116.44 179 100.999C179 85.558 170.057 79 156.524 79L143.766 79L143.766 123.416ZM154.437 114.831L154.437 87.5254L155.868 87.5254C163.022 87.5254 168.09 90.4467 168.09 100.999C168.09 111.552 163.022 114.831 155.868 114.831L154.437 114.831Z" fill-rule="evenodd"  fill="#FFFFFF" >
+</path>
+</g>
+<defs>
+<filter id="filter_-p8aATql_Xrxvlraw1JiC" x="0" y="0" width="208" height="208" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="feFloodId_-p8aATql_Xrxvlraw1JiC"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha_-p8aATql_Xrxvlraw1JiC"/>
+<feOffset dx="0" dy="2"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha_-p8aATql_Xrxvlraw1JiC" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="feFloodId_-p8aATql_Xrxvlraw1JiC" result="dropShadow_1_-p8aATql_Xrxvlraw1JiC"/>
+<feBlend mode="normal" in="SourceGraphic" in2="dropShadow_1_-p8aATql_Xrxvlraw1JiC" result="shape_-p8aATql_Xrxvlraw1JiC"/>
+</filter>
+</defs>
+</svg>

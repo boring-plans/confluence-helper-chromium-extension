@@ -1,0 +1,27 @@
+{
+  "name": "t.md",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.19",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.1.64",
+    "@shikijs/markdown-it": "^1.2.3",
+    "@types/markdown-it": "^13.0.7",
+    "@unocss/preset-icons": "0.59.0-beta.1",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "markdown-it": "^14.1.0",
+    "markdown-it-mermaid": "^0.2.5",
+    "markdown-it-table": "^4.1.1",
+    "unocss": "^0.58.8",
+    "vite": "^5.2.0"
+  }
+}
