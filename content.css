@@ -1,0 +1,39 @@
+.paste-btn-wrapper {
+  position: fixed;
+  border-radius: .5rem;
+  padding: .5rem;
+  background-color: white;
+  box-shadow: 0 10px 20px 0 rgba(169, 173, 204, .3);
+  display: flex;
+  align-items: center;
+  font-size: small;
+}
+
+.paste-btn {
+  padding: .37rem .5rem;
+  cursor: pointer;
+  border-radius: .5rem;
+  background-color: black;
+  color: white;
+}
+
+.paste-btn:hover {
+  background-color: rgb(31 41 55);
+}
+
+.paste-btn:active {
+  background-color: rgb(75 85 99)
+}
+
+.paste-btn.tonal {
+  background-color: rgba(0, 0, 0, .1);
+  color: black;
+}
+
+.paste-btn.tonal:hover {
+  background-color: rgba(0, 0, 0, .15);
+}
+
+.paste-btn.tonal:active {
+  background-color: rgba(0, 0, 0, .2);
+}

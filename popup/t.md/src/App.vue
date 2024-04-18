@@ -29,7 +29,7 @@
           <div>
             <MenuButton
               class="text-slate-900 ring-1 ring-gray-300 bg-white cursor-pointer outline-none border-none inline-flex justify-center items-center rounded-lg pl-4 pr-3 py-2 text-sm font-medium">
-              <div class="truncate max-w-20">{{ currTheme }}</div>
+              <div class="truncate">{{ currTheme }}</div>
               <i class="inline-block i-mdi-chevron-down ml-1"></i>
             </MenuButton>
           </div>
@@ -55,7 +55,7 @@
         </Menu>
         <button :class="btnCls"
           class="inline-block w-full bg-black text-white hover:bg-gray-800 active:bg-gray-600 py-2"
-          @click="insertHTMLAtCursor()">Teleport</button>
+          @click="insertHTMLAtCursor()">Ready</button>
       </div>
     </TabGroup>
   </div>
@@ -85,7 +85,11 @@ async function insertHTMLAtCursor() {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
   if (tab) {
     chrome.tabs.sendMessage(tab.id, { html: resultHtml.value }, (resp) => {
-      if (resp) { alert(resp) } else { alert("Make sure that your cursor is inside of an editing textbox~") }
+      if (resp === 'SUCCESS') {
+        window.close()
+      } else {
+        alert("Insufficient mana! Failed to teleport :/")
+      }
     })
   }
 }

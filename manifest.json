@@ -1,6 +1,6 @@
 {
   "name": "T.MD",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "manifest_version": 3,
   "description": "Teleport Markdown: A chromium extension to help with online doc writing.",
   "icons": {
@@ -26,6 +26,9 @@
       ],
       "js": [
         "content.js"
+      ],
+      "css": [
+        "content.css"
       ]
     }
   ]
