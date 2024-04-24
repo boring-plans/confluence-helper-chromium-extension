@@ -1,5 +1,5 @@
 const states = {
-  html: ''
+  html: '',
 }
 const inlineElements = [
   'a', 'span', 'strong', 'em', 'b', 'i', 'u', 's', 'code',
@@ -7,10 +7,13 @@ const inlineElements = [
   'ruby', 'rt', 'rp'
 ]
 
-chrome.runtime.onMessage.addListener((message, _, sendResponse) => {
-  if (message?.html) {
-    states.html = message.html
+chrome.runtime.onMessage.addListener(({ html, action }, _, sendResponse) => {
+  if (action === 'teleport') {
+    states.html = html
+  } else if (action === 'init') {
+    initializeMouseUp()
   }
+
   sendResponse("SUCCESS")
   return true
 })
@@ -63,18 +66,21 @@ function showPasteBtn(event, offset, dom) {
 }
 
 function addMouseUpListener(dom, posOffset = { x: 0, y: 0 }) {
-  dom.addEventListener('mouseup', (event) => {
+  function domMouseListener(event) {
     const existsPasteBtn = document.querySelector('.paste-btn')
     if (!existsPasteBtn && states.html && event.target) {
       showPasteBtn(event, posOffset, dom)
     }
-  })
+  }
+  dom.removeEventListener('mouseup', domMouseListener)
+  dom.addEventListener('mouseup', domMouseListener)
 }
 
-(() => {
+function initializeMouseUp() {
   addMouseUpListener(document)
   const iframeList = document.querySelectorAll("iframe")
   for (const iframe of iframeList) {
     addMouseUpListener(iframe.contentDocument, iframe.getBoundingClientRect())
   }
-})()
+  console.info("[v1.0.3]T.MD's ready.")
+}

@@ -63,7 +63,7 @@
 
 <script setup>
 import { TabGroup, TabList, Tab, TabPanels, TabPanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import { ref, watch } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 import MarkdownIt from 'markdown-it'
 import { markdownItTable } from 'markdown-it-table'
 import Shiki from '@shikijs/markdown-it'
@@ -84,7 +84,7 @@ async function insertHTMLAtCursor() {
   await genHtml()
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
   if (tab) {
-    chrome.tabs.sendMessage(tab.id, { html: resultHtml.value }, (resp) => {
+    chrome.tabs.sendMessage(tab.id, { action: 'teleport', html: resultHtml.value }, (resp) => {
       if (resp === 'SUCCESS') {
         window.close()
       } else {
@@ -166,4 +166,11 @@ function beautify(html) {
 }
 
 watch(currTheme, genHtml)
+
+onMounted(async () => {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true })
+  if (tab) {
+    chrome.tabs.sendMessage(tab.id, { action: 'init' }, () => { })
+  }
+})
 </script>
